@@ -1,0 +1,177 @@
+header{
+    font-family: "8-bit Operator+";
+    height: 55px;
+    background: #252525;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 0px;
+}
+
+body{
+    font-family: "8-bit Operator+";
+    background: #000000;
+    margin:0;
+}
+
+footer{
+    font-family: "8-bit Operator+";
+    height: 50px;
+    background: #252525;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 0px;
+}
+
+.logo{
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 200;
+}
+
+.menu{
+    color: #ffffff;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0 10px;
+    transition: 0.5s;
+}
+
+.show-menu,
+.hide-menu{
+    font-size: 28px;
+    cursor: pointer;
+    display: none;
+    transition: 0.4s;
+}
+
+.show-menu{
+    order: 1px;
+}
+
+.menu:hover,
+.show-menu:hover,
+.hide-menu:hover{
+    color: #0c001a;
+}
+
+.button-menu{
+    text-decoration: none;
+    background: #252525;
+    color: #999999;
+    text-shadow: 0 2px #000000;
+    padding: 5px 50px;
+    align-self: baseline;
+    transition: 0s;
+}
+
+.button-menu:hover{
+    color:#c1c1c1;
+    transition: 0s;
+}
+
+.flags {
+    position: absolute;
+    right: 0;
+    top: 0;
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.flags li {
+    display: inline-block;
+    padding-right: 10px;
+}
+
+#english{
+    background-image:url("/lang/flag-us.png");
+    height: 4vh;
+    width: 6vh;
+    background-position: center;
+}
+
+#spanish{
+    background-image:url("/lang/flag-mx.png");
+    height: 4vh;
+    width: 6vh;
+    background-position: center;
+}
+
+#check{
+    display:none;
+}
+
+.content-text{
+    position: relative;
+    color:#ffffff;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-download{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    text-align: center;
+    background: #120420;
+    color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 25px;
+    padding: 10px 50px;
+    align-self: baseline;
+    transition: all 0.6s;
+    margin-left: 290px;
+    margin-right: 290px;
+}
+
+.button-download:hover{
+    background: #252525;
+}
+
+@media(max-width: 768px){
+    body{
+        padding: 200px 0px;
+    }
+    .show-menu,
+    .hide-menu{
+        display: block;
+    }
+
+    .menu{
+        position: fixed;
+        width: 100%;
+        background: #252525;
+        left: 0;
+        right: -100;
+        top: 0;
+        text-align: center;
+        padding: 0px 0px;
+        z-index: 100;
+        transition: 0s;
+    }
+
+    .menu a{
+        display: block;
+        padding: 20px;
+    }
+
+    .hide-menu{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+
+    #check:checked ~ .menu{
+        right: 0;
+    }
+
+    .button-download{
+        margin-left: 200px;
+        margin-right: 200px;
+    }
+}

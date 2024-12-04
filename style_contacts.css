@@ -1,0 +1,204 @@
+header{
+    font-family: "8-bit Operator+";
+    height: 55px;
+    background: #252525;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 0px;
+}
+
+body{
+    font-family: "8-bit Operator+";
+    background: #000000;
+    margin:0;
+}
+
+footer{
+    font-family: "8-bit Operator+";
+    height: 50px;
+    background: #252525;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 0px;
+}
+
+.title{
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 200;
+    flex-direction: column;
+    text-align: center;
+}
+
+.subtitle{
+    color: #ffffff;
+    font-weight: 200;
+    flex-direction: column;
+    text-align: center;
+}
+
+.menu{
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0 0px;
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.show-menu,
+.hide-menu{
+    font-size: 28px;
+    cursor: pointer;
+    display: none;
+    transition: 0.4s;
+}
+
+.show-menu{
+    order: 1px;
+}
+
+.menu:hover,
+.show-menu:hover,
+.hide-menu:hover{
+    color: #ffffff;
+}
+
+.button-menu{
+    text-decoration: none;
+    background: #252525;
+    color: #999999;
+    text-shadow: 0 2px #000000;
+    padding: 5px 50px;
+    align-self: baseline;
+    transition: 0s;
+}
+
+.button-menu:hover{
+    color:#c1c1c1;
+    transition: 0s;
+}
+
+.flags{
+    position: absolute;
+    right: 0;
+    top: 0;
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.flags li{
+    display: inline-block;
+    padding-right: 10px;
+}
+
+#english{
+    background-image:url("/lang/flag-us.png");
+    height: 4vh;
+    width: 6vh;
+    background-position: center;
+}
+
+#spanish{
+    background-image:url("/lang/flag-mx.png");
+    height: 4vh;
+    width: 6vh;
+    background-position: center;
+}
+
+#check{
+    display:none;
+}
+
+#options{
+    display: flex;
+    justify-content: center;
+}
+
+.button-yt,
+.button-x,
+.button-gamejolt{
+    text-decoration: none;
+    background: #120420;
+    color: #ffffff;
+    border: 1px solid #000000;
+    align-self: baseline;
+    transition: all 0.6s;
+    border-radius: 30px;
+}
+
+.button-yt{
+    padding: 20px 50px;
+    margin-left: 40px;
+}
+
+.button-x{
+    padding: 20px 47px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.button-gamejolt{
+    padding: 20px 50px;
+    margin-left: 0px;
+}
+
+.button-yt:hover,
+.button-x:hover,
+.button-gamejolt:hover{
+    background: #252525;
+}
+
+@media(max-width: 768px){
+    body{
+        padding: 200px 0px;
+    }
+    .show-menu,
+    .hide-menu{
+        display: block;
+    }
+
+    .menu{
+        position: fixed;
+        width: 100%;
+        background: #252525;
+        left: 0;
+        right: -100;
+        top: 0;
+        text-align: center;
+        padding: 0px 0px;
+        z-index: 100;
+        transition: 0s;
+    }
+
+    .menu a{
+        display: block;
+        padding: 20px;
+    }
+
+    .hide-menu{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+
+    #check:checked ~ .menu{
+        right: 0;
+    }
+
+    .title{
+        padding: 0px 20px;
+    }
+
+    .subtitle{
+        padding: 0px 20px;
+    }
+
+    .button-yt{
+        margin-left: 0px;
+    }
+}

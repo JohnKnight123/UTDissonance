@@ -1,0 +1,228 @@
+*{
+    font-family: "8-bit Operator+";
+}
+
+header{
+    height: 55px;
+    background: #252525;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 0px;
+}
+
+body{
+    background: #000000;
+    /*background-image: url("UTDissonance_icon.png");*/
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    margin:0;
+}
+
+footer{
+    height: 50px;
+    background:#252525;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 0px;
+}
+
+.menu{
+    color:#ffffff;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0 10px;
+    transition: 0.5s;
+}
+
+.show-menu,
+.hide-menu{
+    font-size: 28px;
+    cursor: pointer;
+    display: none;
+    transition: 0.4s;
+}
+
+.show-menu{
+    order: 1px;
+}
+
+.menu:hover,
+.show-menu:hover,
+.hide-menu:hover{
+    color:#0c001a;
+}
+
+.button-menu{
+    text-decoration: none;
+    background: #252525;
+    color: #999999;
+    text-shadow: 0 2px #000000;
+    padding: 5px 50px;
+    align-self: baseline;
+    transition: 0s;
+}
+
+.button-menu:hover{
+    color:#c1c1c1;
+    transition: 0s;
+}
+
+.flags{
+    position: absolute;
+    right: 0;
+    top: 0;
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.flags li{
+    display: inline-block;
+    padding-right: 10px;
+}
+
+#english{
+    background-image:url("/lang/flag-us.png");
+    height: 4vh;
+    width: 6vh;
+    background-position: center;
+}
+
+#spanish{
+    background-image:url("/lang/flag-mx.png");
+    height: 4vh;
+    width: 6vh;
+    background-position: center;
+}
+
+form{
+    width: 450px;
+    margin: auto;
+    background-color:#999999;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    border-radius: 8px;
+    text-align: center;
+    opacity: 0.8;
+}
+
+h2{
+    color:#ffffff;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+#donate,
+textarea{
+    color:#000000;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 7px;
+    box-sizing: border-box;
+    font-size: 17px;
+    border: none;
+}
+
+textarea{
+    min-height: 100px;
+    max-height: 200px;
+    min-width: 100%;
+    max-width: 100%;
+}
+
+#button{
+    background-color:#120420;
+    display: inline-block;
+    text-decoration: none;
+    color:#ffffff;
+    padding: 10px 20px;
+    border: 3px solid #000000;
+    border-radius: 25px;
+    margin-top: 15px;
+    transition: all 0.45s;
+}
+
+#button:hover{
+    cursor: pointer;
+    background-color:#000000;
+    color:#ffffff;
+}
+
+.text1{
+    color:#ff0000;
+    text-align: center;
+}
+
+.result{
+    text-align: center;
+    font-size: larger;
+    padding: 210 0px;
+    color:#ffffff;
+}
+
+@media(max-width: 768px){
+    body{
+        background-image: flex;
+        background-attachment: fixed;
+    }
+
+    form{
+        position: auto;
+        margin: auto;
+        width: 350px;
+        height: 80vh;
+        text-align: center;
+        padding: 100px 0px;
+        transition: 0.6s;
+        padding: 10px 20px;
+        box-sizing: border-box;
+        margin-top: 20px;
+        border-radius: 8px;
+        opacity: 0.8;
+    }
+
+    body{
+        padding: 200px 0px;
+    }
+    .show-menu,
+    .hide-menu{
+        display: block;
+    }
+
+    .menu{
+        position: fixed;
+        width: 100%;
+        background: #252525;
+        left: 0;
+        right: -100;
+        top: 0;
+        text-align: center;
+        padding: 0px 0px;
+        z-index: 100;
+        transition: 0s;
+    }
+
+    .menu a{
+        display: block;
+        padding: 20px;
+    }
+
+    .hide-menu{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+
+    #check:checked ~ .menu{
+        right: 0;
+    }
+
+    .result{
+        padding: 0 0px;
+    }
+}
